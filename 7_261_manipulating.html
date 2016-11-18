@@ -2,19 +2,58 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Manipulating CSS Class Properties Using JavaScript</title>
 </head>
-<body>
+<body id="all">
 
 <h1 id="h1-2">Manipulating CSS Class Properties Using JavaScript</h1>
 
 <script>
-document.getElementById("h1-2").style.color = "red";
+document.getElementById("h1-2").style.color = "green";
+document.getElementById('h1-2').style.border = "blue";
+document.getElementById('h1-2').style.border = "red";
+document.getElementById('h1-2').style.border = "black";
+
+function myFunction() {
+    
+    document.getElementById("h1-2").style = "background-color:gray";
+}
+function myFunction2() {
+    
+    document.getElementById('all').style = "background-color:pink";
+}
+//document.getElementById('all').style = "background-color:pink";
 </script>
 
 <button type="button"
 onclick="document.getElementById('h1-2').style.color = 'green'">
-Push Me!</button>
+green</button>
+
+<button type="button"
+onclick="document.getElementById('h1-2').style.color = 'blue'">
+blue</button>
+
+<button type="button"
+onclick="document.getElementById('h1-2').style.color = 'red'">
+red</button>
+
+<button type="button"
+onclick="document.getElementById('h1-2').style.color = 'black'">
+black</button>
+
+<button type="button"
+onclick="document.getElementById('h1-2').innerHTML = 'New text'">
+new text</button>
+
+<button type="button"
+onclick="document.getElementById('h1-2').innerHTML = 'No more text! :)'">
+:) </button>
+
+<button type="button" 
+onclick="myFunction2()"> body color</button>
+
+<button type="button"
+onclick="myFunction()">gray background + black text</button>
 
 </body>
 </html>
