@@ -41,6 +41,21 @@ function ajax2() {
   xhttp.send();
 }
 
+function genesis() {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("cit").innerHTML =
+      this.responseText;
+    }
+  };
+
+ 
+  xhttp.open("GET", "ajax1.txt", true);
+  xhttp.send();
+}
+
 </script>
 </head>
 <body>
@@ -49,8 +64,9 @@ function ajax2() {
 <div id="cit">
 <h1>CIT-261</h1>
 </div>
-<button type="button" onclick="ajax()">small array loop</button>
+<button type="button" onclick="genesis()">Genesis</button>
+<button type="button" onclick="ajax()">Small array loop</button>
 
-<button type="button" onclick="ajax2()">quote</button>
+<button type="button" onclick="ajax2()">Quote</button>
 </body>
 </html>
