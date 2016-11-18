@@ -1,23 +1,66 @@
-<!doctype html>
-<html>
-  <head>
-     <meta charset="utf-8">
-     <title>Web-apps by Dmitriy-S</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
 
-      <header>
-        <h1>Web-apps</h1>
-        <p>CIT-261</p>
-      </header>
+<script>
 
-     
-      <footer>
-        <div>
-    
-      </footer>
-    </div>
- 
-  </body>
+function json(){
+var love = '{"food":"Pizza","drink":"Sprite","music":"Rock"}';
+
+var all = '{"cat1":"food is","cat2":"drink is","cat3":"music is"}';
+
+var one = JSON.parse(love);
+var two = JSON.parse(all);
+
+document.getElementById("food").innerHTML = one.food;
+document.getElementById("drink").innerHTML = one.drink ;
+document.getElementById("music").innerHTML = one.music;
+
+document.getElementById("1").innerHTML = two.cat1;
+document.getElementById("2").innerHTML = two.cat2;
+document.getElementById("3").innerHTML = two.cat3;
+
+document.getElementById("h1-2").style.color = "red";
+}
+
+function stringify(){
+
+
+
+var all = '{"cat1":"food is","cat2":"drink is","cat3":"music is"}';
+var love = '{"food":"Pizza","drink":"Sprite","music":"Rock"}';
+love = JSON.stringify({"food":"fruits","drink":"milk","music":"opera"});
+
+var one = JSON.parse(love);
+var two = JSON.parse(all);
+
+document.getElementById("food").innerHTML = one.food;
+document.getElementById("drink").innerHTML = one.drink ;
+document.getElementById("music").innerHTML = one.music;
+
+document.getElementById("1").innerHTML = two.cat1;
+document.getElementById("2").innerHTML = two.cat2;
+document.getElementById("3").innerHTML = two.cat3;
+
+document.getElementById("h1-2").style.color = "green";
+}
+</script>
+
+</head>
+<body>
+
+<h2 id="h1-2">What I love</h2>
+<div id="1"></div>
+<i><p id="food"></p></i>
+<div id="2"></div>
+<i><p id="drink"></p></i>
+<div id="3"></div>
+<i><p id="music"></p></i>
+
+<button onclick="json()">json parse</button>
+<button onclick="stringify()">json stringify</button>
+
+</body>
 </html>
