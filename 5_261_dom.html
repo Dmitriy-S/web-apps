@@ -1,23 +1,53 @@
-<!doctype html>
-<html>
-  <head>
-     <meta charset="utf-8">
-     <title>Web-apps by Dmitriy-S</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
 
-      <header>
-        <h1>Web-apps</h1>
-        <p>CIT-261</p>
-      </header>
+<script>
+function app() {
+    var p = document.createElement("p");
+    var h1 = document.createTextNode("one more");
+    p.appendChild(h1);
+    document.getElementById("h1").appendChild(p);
+}
 
-     
-      <footer>
-        <div>
-    
-      </footer>
-    </div>
- 
-  </body>
+function del() {
+
+    var list = document.getElementById("h1");
+    h1.removeChild(list.childNodes[0]);
+
+}
+
+function insert() {
+    var chocolate = document.createElement("LI");
+    var food = document.createTextNode("chocolate");
+    chocolate.appendChild(food);
+
+    var list = document.getElementById("myList");
+    list.insertBefore(chocolate, list.childNodes[0]);
+}
+</script>
+
+</head>
+<body id="all">
+
+<h1 id="h1">DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
+
+My food Food pyramid (nutrition) 
+<ol id="myList">
+  <li>bread</li>
+  <li>pasta</li>
+  <li>cola</li>
+  <li>pizza</li>
+  <li>milk</li>
+</ol>
+
+
+<button onclick="app()">One more h1</button>
+
+<button onclick="del()">Delete first h1</button>
+
+<button onclick="insert()">Insert some chocolate</button>
+</body>
 </html>
