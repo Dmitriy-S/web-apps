@@ -6,6 +6,11 @@
 
 <script>
 function ajax() {
+
+ var txt = ["ajax1.txt", "ajax2.txt", "ajax3.txt"]; 
+
+  for (var i = 0; i < 3; i++) {
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -14,9 +19,7 @@ function ajax() {
     }
   };
 
-  var txt = ["ajax1.txt", "ajax2.txt", "ajax3.txt"]; 
-
-  for (var i = 0; i < 3; i++) {
+ 
   xhttp.open("GET", txt[i], true);
   xhttp.send();
   }
