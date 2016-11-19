@@ -1,23 +1,52 @@
-<!doctype html>
-<html>
-  <head>
-     <meta charset="utf-8">
-     <title>Web-apps by Dmitriy-S</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Events</title>
+<style type="text/css">
+	h1{
 
-      <header>
-        <h1>Web-apps</h1>
-        <p>CIT-261</p>
-      </header>
+		margin: 10px auto; 
+		background-color: yellow;
+	}
+</style>
 
-     
-      <footer>
-        <div>
-    
-      </footer>
-    </div>
- 
-  </body>
+</head>
+<body onload="start()">
+<main id="h1">
+
+<p id="uno">1</p>
+
+<p id="two"></p>
+<p>so...</p>
+<b><p id="three"></p></b>
+
+</main>
+<script type="text/javascript">
+	
+function start(){
+
+document.getElementById("uno").onload = function() {p()};
+p();
+}
+
+document.getElementById("two").addEventListener("load", end());
+
+function p() {
+    document.getElementById("uno").innerHTML = "Onload is good? - good";
+}
+
+function end(){
+
+	document.getElementById("two").innerHTML = "Event Listener is good? - very good";
+	document.getElementById("three").innerHTML = "Release The Kraken!";
+	var p = document.createElement("h1");
+    var h1 = document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies vulputate libero quis fringilla. Phasellus sagittis sapien velit, sed posuere lorem eleifend nec. In vehicula enim vitae nisi hendrerit, vel iaculis tortor porttitor. Fusce urna ante, tristique et arcu eu, ullamcorper porta lectus. Maecenas ac magna eu ligula malesuada semper sit amet at nibh. Nullam congue, urna a vehicula consectetur, odio risus placerat lacus, vel ultricies massa lacus finibus nisl. Maecenas condimentum tristique turpis ultricies interdum. Curabitur urna dolor, molestie in facilisis sed, efficitur in quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae");
+    p.appendChild(h1);
+    document.getElementById("h1").appendChild(p);
+}
+
+</script>
+
+</body>
 </html>
