@@ -3,7 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>AJAX</title>
+<style type="text/css">
+  .json{
 
+    width: 210px;
+    color: red;
+  }
+</style>
 <script>
 function ajax() {
 
@@ -56,10 +62,46 @@ function genesis() {
   xhttp.send();
 }
 
+function getJson() {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("cit").innerHTML =
+      this.responseText;
+    }
+  };
+
+if (typeof(Storage) !== "undefined") {
+ 
+    localStorage.setItem("message", "Cangrads! Your browser support Web Storage! :)");
+    document.getElementById("check").innerHTML = localStorage.getItem("message");
+    localStorage.removeItem("message");
+
+var json1 = '{"one":"один","two":"два","three":"три"}';
+var one = JSON.parse(json1);
+
+document.getElementById("one").innerHTML = one.one;
+document.getElementById("two").innerHTML = one.two;
+document.getElementById("three").innerHTML = one.three;
+
+} else {
+    document.getElementById("check").innerHTML = "Sorry, your browser does not support Web Storage :(";
+} 
+  xhttp.open("GET", "ajax4.txt", true);
+  xhttp.send();
+}
+
 </script>
 </head>
 <body>
 	
+
+<p id="one"></p>
+<p id="two"></p>
+<p id="three"></p>
+
+
 
 <div id="cit">
 <h1>CIT-261</h1>
@@ -68,5 +110,7 @@ function genesis() {
 <button type="button" onclick="ajax()">Small array loop</button>
 
 <button type="button" onclick="ajax2()">Quote</button>
+<br>
+<button type="button" onclick="getJson()" class="json">JSON</button>
 </body>
 </html>
