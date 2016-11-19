@@ -109,7 +109,7 @@ if (typeof(Storage) !== "undefined") {
 //var json1 = '{"one":"один","two":"два","three":"три"}';
 
 
-//var one = JSON.parse(json1);
+var one = JSON.parse(json1);
 //document.getElementById("one").innerHTML = one.one;
 //document.getElementById("two").innerHTML = one.two;
 //document.getElementById("three").innerHTML = one.three;
@@ -119,9 +119,9 @@ if (typeof(Storage) !== "undefined") {
 
     var out = "";
     var i;
-    for(i = 0; i < json1.length; i++) {
-        out += '<a href="' + json1[i].url + '">' + 
-        json1[i].display + '</a><br>';
+    for(i = 0; i < one.length; i++) {
+        out += '<a href="' + one[i].url + '">' + 
+        one[i].display + '</a><br>';
     }
     document.getElementById("three").innerHTML = out;
 
