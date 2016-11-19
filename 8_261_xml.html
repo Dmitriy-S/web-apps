@@ -98,29 +98,12 @@ if (typeof(Storage) !== "undefined") {
 var x;
 x = localStorage.getItem('test');
 
-  //  document.getElementById("check").innerHTML = localStorage.getItem("message");
-   // localStorage.removeItem("message");
-
-//var json1 = '{"one":"один","two":"два","three":"три"}';
 
 
-//var one = JSON.parse(json1);
-document.getElementById("one").innerHTML = x.one;
-document.getElementById("two").innerHTML = x.two;
-document.getElementById("three").innerHTML = x.three;
-
-document.getElementById("check").innerHTML = x;
-
-////document.getElementById("three").innerHTML = json1;
-
-
-//    var out = "";
-//    var i;
-//    for(i = 0; i < x.length; i++) {
-//        out += '<a href="' + x[i].url + '">' + 
-//        x[i].display + '</a><br>';
-//    }
-//    document.getElementById("three").innerHTML = x;
+var y = JSON.parse(x);
+document.getElementById("one").innerHTML = y.one;
+document.getElementById("two").innerHTML = y.two;
+document.getElementById("three").innerHTML = y.three;
 
 
 
