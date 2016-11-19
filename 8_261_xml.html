@@ -75,6 +75,22 @@ function genesis() {
 <script type="text/javascript">
   function getJson() {
 
+
+var xmlhttp = new XMLHttpRequest();
+var url = "ajax4.txt";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var json1 = JSON.parse(this.responseText);
+        parsJson(json1);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+}
+function parsJson (json1){
+/*
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -83,25 +99,26 @@ function genesis() {
       this.responseText;
     }
   };
-
+/
 if (typeof(Storage) !== "undefined") {
  
     localStorage.setItem("message", "Cangrads! Your browser support Web Storage! :)");
     document.getElementById("check").innerHTML = localStorage.getItem("employees");
     localStorage.removeItem("message");
-
-var json1 = '{"one":"один","two":"два","three":"три"}';
+*/
+//var json1 = '{"one":"один","two":"два","three":"три"}';
 var one = JSON.parse(json1);
 
 document.getElementById("one").innerHTML = one.one;
 document.getElementById("two").innerHTML = one.two;
 document.getElementById("three").innerHTML = one.three;
 
+/*
 } else {
     document.getElementById("check").innerHTML = "Sorry, your browser does not support Web Storage :(";
 } 
   xhttp.open("GET", "ajax4.txt", true);
-  xhttp.send();
+  xhttp.send();  */
 }
 
 </script>
