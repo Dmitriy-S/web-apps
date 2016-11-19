@@ -1,0 +1,64 @@
+.bg-animation {
+    width: auto;
+    height: auto;
+    background: orange;
+    -webkit-animation: animation 7s infinite; 
+    animation: animation 7s infinite;
+}
+
+.text-animation{
+	color: black;
+    -webkit-animation: animation 7s infinite; 
+    animation: animation 7s infinite;
+}
+
+
+@-webkit-keyframes animation {
+    from {background-color: orange;}
+    to {background-color: red;}
+
+    from {color: black;}
+    to {color: white;}
+}
+
+@keyframes animation {
+    from {background-color: orange;}
+    to {background-color: red;}
+
+    from {color: black;}
+    to {color: white;}
+}
+
+
+
+
+p{
+	width: 200px;
+  	height: 200px;
+  	background-color: green;
+    margin: 0 auto;
+    animation-name: anim;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    display: flex;
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(1);
+    background-color: green;
+    border-radius: 100%;
+  }
+  70% {
+    background-color: blue;
+  }
+  100% {
+    transform: scale(2);
+    background-color: lime;
+}
+}
