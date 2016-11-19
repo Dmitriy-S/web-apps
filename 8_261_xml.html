@@ -78,7 +78,8 @@ function genesis() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("cit").innerHTML =
+      //document.getElementById("cit").innerHTML =
+      localStorage.setItem("employees", "")=
       this.responseText;
     }
   };
@@ -86,7 +87,7 @@ function genesis() {
 if (typeof(Storage) !== "undefined") {
  
     localStorage.setItem("message", "Cangrads! Your browser support Web Storage! :)");
-    document.getElementById("check").innerHTML = localStorage.getItem("message");
+    document.getElementById("check").innerHTML = localStorage.getItem("employees");
     localStorage.removeItem("message");
 
 var json1 = '{"one":"один","two":"два","three":"три"}';
