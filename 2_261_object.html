@@ -1,23 +1,59 @@
-<!doctype html>
-<html>
-  <head>
-     <meta charset="utf-8">
-     <title>Web-apps by Dmitriy-S</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objects</title>
+<style type="text/css">
+	h1{
+		color: blue;
+	}
+	p{
+		color: red;
+	}
+</style>
+<script type="text/javascript">
 
-      <header>
-        <h1>Web-apps</h1>
-        <p>CIT-261</p>
-      </header>
+function one(){
 
-     
-      <footer>
-        <div>
-    
-      </footer>
-    </div>
- 
-  </body>
+var p = document.createElement("p");
+var h1 = document.createTextNode(":)");
+p.appendChild(h1);
+document.getElementById("h1").appendChild(p);
+
+var Food = function (name){
+	this.name = name;
+}
+
+Food.prototype.aName = function(){
+	
+x = "I love to eat " + this.name;
+}
+
+Food.prototype.yName = function(){
+	
+y = "I love to drink " + this.name;
+}
+
+var pizza = new Food("pizza");
+var cola = new Food("cola");
+
+cola.name = "spite";
+
+pizza.aName();
+cola.yName();
+
+
+
+document.getElementById('output').innerHTML = x + "<br>" + y;
+
+}
+</script>
+</head>
+<body>
+
+<h1 id="h1">The best food</h1>
+
+<h2><i><div id="output"></div></i></h2>
+<button onclick="one()">start</button>
+</body>
 </html>
