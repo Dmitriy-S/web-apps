@@ -1,23 +1,39 @@
-<!doctype html>
-<html>
-  <head>
-     <meta charset="utf-8">
-     <title>Web-apps by Dmitriy-S</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
 
-      <header>
-        <h1>Web-apps</h1>
-        <p>CIT-261</p>
-      </header>
+	<script type="text/javascript">
 
-     
-      <footer>
-        
-     
-      </footer>
-    
- 
-  </body>
+			function one(){
+			var x = parseFloat(document.getElementById('one').value);
+			y = two(x);
+
+			document.getElementById('output').innerHTML = y;
+		}
+		function two(x){
+			var y = 0;
+			var z = [];
+			for (var i = 0; i < 10; i++)
+			{
+				y += i * x;
+				z [i] = y;
+			}
+			arr(z);
+		return y;
+		}
+		function arr(z){
+			if(!z){
+				document.getElementById('output').innerHTML = "empty";
+			}
+		}
+
+	</script>
+	<head>
+<body>
+	<input type="text" name="one" id="one">
+	<div id="output"></div>
+	<button onclick="one()">start</button>
+</body>
 </html>
