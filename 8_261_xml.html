@@ -93,9 +93,9 @@ function parsJson (json1){
 
 if (typeof(Storage) !== "undefined") {
  
-    localStorage.setItem("message", json1);
-    document.getElementById("check").innerHTML = localStorage.getItem("message");
-    localStorage.removeItem("message");
+    localStorage.setItem(json1);
+  //  document.getElementById("check").innerHTML = localStorage.getItem("message");
+   // localStorage.removeItem("message");
 
 //var json1 = '{"one":"один","two":"два","three":"три"}';
 
@@ -106,13 +106,14 @@ if (typeof(Storage) !== "undefined") {
 //document.getElementById("three").innerHTML = one.three;
 
 ////document.getElementById("three").innerHTML = json1;
-
+var x;
+localStorage.getItem(json) = x;
 
     var out = "";
     var i;
-    for(i = 0; i < json1.length; i++) {
-        out += '<a href="' + json1[i].url + '">' + 
-        json1[i].display + '</a><br>';
+    for(i = 0; i < x.length; i++) {
+        out += '<a href="' + x[i].url + '">' + 
+        x[i].display + '</a><br>';
     }
     document.getElementById("three").innerHTML = out;
 
