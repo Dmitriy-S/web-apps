@@ -109,13 +109,13 @@ if (typeof(Storage) !== "undefined") {
 var x;
 x = localStorage.getItem('test');
 
-    var out = "";
-    var i;
-    for(i = 0; i < x.length; i++) {
-        out += '<a href="' + x[i].url + '">' + 
-        x[i].display + '</a><br>';
-    }
-    document.getElementById("three").innerHTML = out;
+//    var out = "";
+//    var i;
+//    for(i = 0; i < x.length; i++) {
+//        out += '<a href="' + x[i].url + '">' + 
+//        x[i].display + '</a><br>';
+//    }
+    document.getElementById("three").innerHTML = x;
 
 
 
