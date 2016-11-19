@@ -93,7 +93,7 @@ function parsJson (json1){
 
 if (typeof(Storage) !== "undefined") {
  
-    localStorage.setItem('test', json1);
+    localStorage.setItem('test', JSON.stringify(json1));
   //  document.getElementById("check").innerHTML = localStorage.getItem("message");
    // localStorage.removeItem("message");
 
