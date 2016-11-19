@@ -3,13 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</title>
+<title>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</title>
 </head>
 <body align="center" style="margin: 10px auto; background-color: #d6d1db;">
 <div id="check"></div>
 Let's play with the loops and array
 <div id="arr"></div>
 <div id="stor"></div>
+
+
+<h2 id="h1-2">Some JSON</h2>
+<h4>Russian - English translator</h4>
+<br>
+<div id="1"></div><p id="one"></p>
+<div id="2"></div><p id="two"></p>
+<div id="3"></div><p id="three"></p>
+
+<button onclick="json()">json parse</button>
+
 <script>
 
 if (typeof(Storage) !== "undefined") {
@@ -30,6 +41,24 @@ for (var i = 0; i < 10; i++) {
 
 document.getElementById("arr").innerHTML = x;
 
+function json(){
+var json1 = '{"one":"один","two":"два","three":"три"}';
+
+var json2 = '{"e1":"one is","e2":"two is","e3":"three is"}';
+
+var one = JSON.parse(json1);
+var two = JSON.parse(json2);
+
+document.getElementById("one").innerHTML = one.one;
+document.getElementById("two").innerHTML = one.two;
+document.getElementById("three").innerHTML = one.three;
+
+document.getElementById("1").innerHTML = two.e1;
+document.getElementById("2").innerHTML = two.e2;
+document.getElementById("3").innerHTML = two.e3;
+
+
+}
 
 
 } else {
