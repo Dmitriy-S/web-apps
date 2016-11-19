@@ -114,7 +114,17 @@ if (typeof(Storage) !== "undefined") {
 //document.getElementById("two").innerHTML = one.two;
 //document.getElementById("three").innerHTML = one.three;
 
-document.getElementById("three").innerHTML = json1;
+////document.getElementById("three").innerHTML = json1;
+
+
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' + 
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("three").innerHTML = out;
+
 
 /*
 } else {
