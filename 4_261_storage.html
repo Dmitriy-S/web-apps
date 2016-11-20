@@ -81,5 +81,51 @@ document.getElementById("3").innerHTML = two.e3;
 </script>
 
 
+<p id="one2"></p>
+<p id="two2"></p>
+<p id="three2"></p>
+
+<script type="text/javascript">
+  function getJson() {
+
+
+var xmlhttp = new XMLHttpRequest();
+var url = "ajax4.txt";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var json1 = JSON.parse(this.responseText);
+        parsJson(json1);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+}
+function parsJson (json1){
+
+if (typeof(Storage) !== "undefined") {
+ 
+    localStorage.setItem('test', JSON.stringify(json1));
+
+var x;
+x = localStorage.getItem('test');
+
+
+
+var y = JSON.parse(x);
+document.getElementById("one2").innerHTML = y.one;
+document.getElementById("two2").innerHTML = y.two;
+document.getElementById("three2").innerHTML = y.three;
+
+
+
+} else {
+    document.getElementById("check").innerHTML = "Sorry, your browser does not support Web Storage :(";
+}  
+}
+
+</script>
+<button type="button" onclick="getJson()">JSON + Local Storage API</button>
 </body>
 </html>
