@@ -35,10 +35,17 @@
 <br/><br/><br/><br/>
 
 
-<button type="button" onclick="go()">Push me few times and enjoy :)</button> 
+<button type="button" id="tran" onclick="go()"><h2>Push me few times and enjoy :)</h2></button> <br>
+<button onclick="tra()"><h2>Activate hoover on button</h2></button>
 
 
 
+<script>
+function tra() {
+    document.getElementById("tran").style.WebkitTransition = "all 1s"; 
+    document.getElementById("tran").style.transition = "all 1s";       
+}
+</script>
 
 
    </main>  
