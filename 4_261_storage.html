@@ -42,12 +42,25 @@ for (var i = 0; i < 10; i++) {
 document.getElementById("arr").innerHTML = x;
 
 function json(){
-var json1 = '{"one":"один","two":"два","three":"три"}';
+var json1L = '{"one":"один","two":"два","three":"три"}';
 
-var json2 = '{"e1":"one is","e2":"two is","e3":"three is"}';
+var json2L = '{"e1":"one is","e2":"two is","e3":"three is"}';
 
-var one = JSON.parse(json1);
-var two = JSON.parse(json2);
+
+
+    localStorage.setItem('temp', json2L);
+    localStorage.setItem('temp2', json1L);
+
+var t;
+var t2;
+
+t = localStorage.getItem('temp');
+t2 = localStorage.getItem('temp2');
+
+var one = JSON.parse(t2);
+var two = JSON.parse(t);
+
+
 
 document.getElementById("one").innerHTML = one.one;
 document.getElementById("two").innerHTML = one.two;
