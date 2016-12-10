@@ -43,7 +43,9 @@
 	margin-bottom: 3%;
 }
 
-
+.text-justify {
+	margin: 0 auto;
+}
 
 /* CSS for tags */
 html {
