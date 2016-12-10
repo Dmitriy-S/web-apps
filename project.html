@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+<link rel="stylesheet" href="style.css">
 <title>Budget Calculator</title>
+
 </head>
 <body>
-<div id="check"></div>
+<div id="check" class="check"></div>
 
 <div id="arr"></div>
 <div id="stor"></div>
 
 
-<h2 id="h1-2">Budget Calculator</h2>
+<h2 id="h1-2" class="text-center1">Budget Calculator</h2>
 
-<br>
-<i><div id="1"></div></i><strong><p id="one"></p></strong>
-<i><div id="2"></div></i><strong><p id="two"></p></strong>
-<i><div id="3"></div></i><strong><p id="three"></p></strong>
+<button onclick="json()" class="text-center2">Instruction in 3 steps</button><br><br>
+<i><div id="1" class="steps"></i></div><strong><p id="one" class="steps2"></p></strong>
+<i><div id="2" class="steps"></div></i><strong><p id="two" class="steps2"></p></strong>
+<i><div id="3" class="steps"></div></i><strong><p id="three" class="steps2"></p</strong>
 
-<button onclick="json()">Instruction in 3 steps</button>
+
 
 <script>
 
@@ -81,16 +82,16 @@ document.getElementById('amount').innerHTML = "Your balance is " + sum + "$";
 
 
 <form>
-<br><br><br>
+<br>
 
-Name<input type="text" name="" id="" placeholder="name" required="true"><br>
-Email<input type="email" name="" value="" placeholder="your@email.com" required="true"><br>
-Income<input type="number" name="" id="income" placeholder="income in last month" required="true"><br>
-Expenses<input type="number" name="expenses" id="expenses" placeholder="expenses in last month" required="true"><br>
+<label>Name</label><input type="text" name="" id="" placeholder="name" required="true" size=50><br><br>
+<label>Email</label><input type="email" name="" value="" placeholder="your@email.com" required="true" size=50><br><br>
+<label>Income</label><input type="number" name="" id="income" placeholder="income in last month" required="true" ><br><br>
+<label>Expenses</label><input type="number" name="expenses" id="expenses" placeholder="expenses in last month" required="true"><br><br>
 
-<button type="button" onclick="compute()">Compute balance</button>
-<p id="amount"></p>
-
+<button type="button" class="text-center2" onclick="compute()">Compute balance</button><br><br>
+<p id="amount" class="amount"></p>
+<br><br>
 </form>
 
 <p id="one2"></p>
@@ -138,12 +139,12 @@ document.getElementById("three2").innerHTML = y.three;
 }
 
 </script>
-<button type="button" onclick="getJson()">3 advice from Forbes how to manage budget</button>
+<button type="button" onclick="getJson()" class="text-center">3 advice from Forbes how to manage budget</button>
 <br><br><br><br>
-Inspiring video :)
-<br><br>
+<span class="video-title">Inspiring video :)</span>
+
 <iframe title="YouTube video player" class="youtube-player" type="text/html" 
-width="640" height="390" src="https://www.youtube.com/embed/3n-DOKBffuU"
+width="445" height="200" src="https://www.youtube.com/embed/3n-DOKBffuU"
 frameborder="0" allowFullScreen></iframe>
 
 </body>
