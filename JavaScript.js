@@ -62,7 +62,7 @@ function addingExpenses() {
               parseFloat(document.getElementById('services').value) +
               parseFloat(document.getElementById('trips').value);
     localStorage.setItem("totalExpenses", exp);
-    document.getElementById('total_expenses').innerHTML = "Your expenses is $  " + exp;
+    document.getElementById('total_expenses').innerHTML = "Your expenses are $  " + exp;
     return exp;
 }
 
