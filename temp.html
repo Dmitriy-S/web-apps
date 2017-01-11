@@ -1,0 +1,276 @@
+<style type="text/css">
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  z-index:10;
+  width:980px;
+}
+</style>
+<script type="text/javascript">
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+   
+    if (scroll >= 500) {
+        $(".BlackBeltNavi").addClass("sticky-nav");
+ 
+    }else{
+        $(".BlackBeltNavi").removeClass("sticky-nav");
+ 
+    }
+  });
+
+function proseries_add_to_cart(){
+    
+    $('.proSeriesPopup').show();
+    
+    var pid = $("#proSeriesAddItem #pid").val();
+    var oa = $("#proSeriesAddItem #oa").val();
+    var oa_id = $("#proSeriesAddItem #oa_id").val();
+    var oa_quantity = $("#proSeriesAddItem #oa_quantity").val();
+    var ProSeriesProdcut = $("#proSeriesAddItem #ProSeriesProdcut").val();
+
+    var dataString = 'pid='+ pid + '&oa=' + oa + '&oa_id=' + oa_id + '&oa_quantity=' + oa_quantity+'&ProSeriesProdcut='+ProSeriesProdcut;
+
+    $.ajax({  
+      type: "POST",  
+      url: "index.php",  
+      data: dataString,  
+      success: function() {
+        
+        
+        
+      }  
+    });  
+    return false;  
+  }
+</script>
+<div class="ProSeriesMainBanner">
+    <div class="ProSeriesBannerTitle">Donna Bella <span>Pro Series</span></div>
+    <div class="live_training">LIVE TRAINING EVENT</div>
+    <div class="BannerRightText"></div>
+  </div>
+
+<div class="BlackBeltNavi menu_link">
+   <div class="left-text"> DONNA BELLA <span>PRO SERIES</span></div>
+    <a href="http://www.donnabellahairextensions.com/proseries#proC">Pro Certification Class</a>
+    <a href="http://www.donnabellahairextensions.com/proseries_team">Team</a>
+    <a href="http://www.donnabellahairextensions.com/proseries_locations">Locations</a>
+    <a href="http://www.donnabellahairextensions.com/proseries_experience">Experience</a>
+    <a href="http://www.donnabellahairextensions.com/proseries_locations"><div class="right-text"><h1>ENROLL NOW<span style="font-style:italic; font-size: 15px;">only</span><span style="font-size:90%;">$75</span></h1></div></a><a>
+  </a></div>
+    <a>
+  </a><div class="series_black_friday"><a>
+  <div class="expert_hands_main">
+  <div class="expert_hands">
+    <h1>Expert, Hands-On Support</h1>
+    <h2>for integrating hair extensions into your salon practice.</h2>
+  </div>
+  <div class="ProSeriesTitle featuring">
+        <h2>Featuring:</h2>
+      </div>
+  <div class="InThisClass full_width">
+
+      <div class="featuring_list">
+        <ul>
+            <li class="first"><h1><span>Certification</span> in the I-Link, Kera-Link, and Tape-In methods</h1></li>
+            <li><h1><span>Best practices and advanced methods </span>for hair extension services</h1></li>
+            <li><h1><span>Pricing and advertising strategies </span>to boost your business</h1></li>
+            <li class="last"><h1><span>Salon development </span>for your whole team</h1></li>
+        </ul>
+        </div>
+  </div>
+  </div>
+  <div class="how_it_works_box" style="background-color: #e6e6e6;">
+     <div class="InThisClass full_width">
+         <div class="ProSeriesTitle how_it_works">
+            <h2 style="background-color: #e6e6e6;">How It Works</h2>
+         </div>
+     </div>
+     <div class="list_box">
+        <div class="list_how-it-work">
+        <h2>1. Expert <br>Demonstration</h2>
+        Learn how to install, blend, maintain, and remove our
+professional extensions directly from Ruben Martinez—Donna Bella’s
+Director of Education.
+         </div>
+        <div class="list_how-it-work">
+        <h2>2. Hands-On <br>Application</h2>
+            Practice your extensions technique under the instructor’s guiding eyes and receive direct feedback in real time.
+         </div>
+        <div class="list_how-it-work">
+        <h2>3. Team-Building <br>Exercises</h2>
+            Learn alongside other stylists for maximum
+benefit—exchanging tips, offering support, and building bonds that last
+beyond the event.
+         </div>
+        <div class="list_how-it-work">
+        <h2>4. Individual <br>Verification</h2>
+            Complete your Certification with complementary access to our
+ Online Education platform, where you can review all three training
+videos.
+         </div>
+    </div>
+  </div>
+  </a>
+  <div class="text-center">
+        <a>Master the art of hair extension installation with Donna Bella’s
+ Director of Education, Ruben Martinez. This all-day, intensive training
+ course will give you hands-on experience with all three professional
+hair extension methods (I-Link, Kera-Link, and Tape-In), plus the
+know-how you need to apply that experience and improve your salon!<br><br>
+        Material includes fundamental installation, cutting, and
+blending techniques, maintenance and removal, in-depth consultation
+strategies, business insights, and special expert techniques for
+advanced-level clients (with pixie, A-bob, and shoulder-length
+hairstyles).<br><br>
+        Here’s just a small glimpse:<br><br></a>
+        <!-- <div class="video-img">
+            <iframe src="https://player.vimeo.com/video/131706949" width="750" height="422" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div> -->
+        <a>This fun day filled with amazing products, exceptional
+training, and an unforgettable time with Ruben and the Donna Bella Team
+is valued at up to $1,000, but you can experience
+it all for one low price.</a>
+
+        <div class="SelectYoutCityBTN enroll_now_btn"><a href="http://www.donnabellahairextensions.com/proseries_locations">ENROLL NOW</a>
+            <p>space is limited</p>
+        </div>
+    </div>
+   <div class="youll_learne">
+        You’ll Learn:
+   </div>
+   <div class="list-box">
+        <div class="list">
+            <h1>1.</h1>
+            <span>How to install and blend three types of <br>
+                professional extensions</span>
+        </div>
+        <div class="list">
+            <h1>4.</h1>
+            <span>Proper placement and spacing of <br>
+                strands and wefts</span>
+        </div>
+        <div class="list">
+            <h1>2.</h1>
+            <span>How to properly maintain and<br>
+                remove extensions</span>
+        </div>
+        <div class="list">
+            <h1>5.</h1>
+            <span>How to price a hair extension <br>
+                installation and boost your revenue</span>
+        </div>
+        <div class="list">
+            <h1>3.</h1>
+            <span>How to determine the number of <br>
+                  packs of hair a client needs</span>
+        </div>
+        <div class="list">
+            <h1>6.</h1>
+            <span>How to perform an advanced installation <br>
+                  utilizing expert techniques on:<br>
+                    -a client with a pixie cut<br>
+                    -a client with an A-bob<br>
+                    -a client with shoulder-length hair<br><br><br></span>
+        </div>
+   </div>
+   <div class="clear"></div>
+    <div class="benefits_of_certification" id="proC">
+      <div class="InThisClass full_width">
+           <div class="ProSeriesTitle how_it_works full_width">
+              <h2>Benefits of Certification</h2>
+           </div>
+       </div>
+       <div class="InAddition full_width">
+          <ul class="benefits">
+            <li class="first">Not only will this live event prepare you
+for the best possible hair extension practice, it’ll also make you a
+Certiﬁed Donna Bella extensions practitioner, which comes with its own
+slew of noteworthy perks:</li>
+            <li><b style="font-size: 130%;">-a listing in our Online Directory.</b> You’ll be in
+our Online Directory of licensed Donna Bella Stylists, so you can
+connect with clients in your area. We receive tens of thousands of
+searches on our website through our <a href="http://www.donnabellahairextensions.com/find-a-stylist/index.php"> "Find a Stylist"</a> page, all from people looking for an experienced salon professional to install their hair extensions. </li>
+            <li><b style="font-size: 130%;">—Certified Intro Klt.</b> We’ll send you a free
+Certiﬁed Intro Kit, which includes tons of helpful marketing materials,
+an 18-page hair guide, and a product guide. Marketing materials include
+posters, window clings, and shelf talkers that advertise your hair
+extension practice. </li>
+            <li><b style="font-size: 130%;">-Certiﬁed Rewards status.</b> Being Certiﬁed means
+beneﬁting from all manner of Certified-exclusive sales, discounts, and
+rewards! These include forever free marketing materials, a lower rate on
+ Hair Insure, and access to extra information and resources on the DB
+website. <a href="http://www.donnabellahairextensions.com/certified_rewards" class="underlinenone">Click here</a> to learn more about Certiﬁed Rewards. </li>
+            <li class="last"><b style="font-size: 130%;">—National Stylist Search eligibility.</b>
+  Every year, we recruit new, fresh talent for our Elite Donna Bella
+education team—a prestigious group that accompanies DB to our national
+and international trade shows and training events. Expand your skills,
+networks, and horizons all at once, and in signature DB style.
+Applications are accepted between January and June. <a href="http://www.donnabellahair.com/nss-info" class="underlinenone">Click here</a> to learn more.</li>
+          </ul>
+    </div>
+        <div class="SelectYoutCityBTN enroll_now_btn">
+            <a href="http://www.donnabellahairextensions.com/proseries_locations">ENROLL NOW</a>
+            <p>space is limited</p>
+        </div>
+    <div class="InThisClass full_width">
+           <div class="ProSeriesTitle how_it_works full_width">
+              <h2>Become a Master</h2>
+           </div>
+    </div>
+    <div class="InAddition full_width">
+          <ul class="benefits">
+            <li class="first">Once you’ve completed the training, use the login information provided to you on the date of the event to sign in to our<a href="http://donnabellahair.com/oe"> Online Education portal</a>.
+ Here, you’ll be able to review our educational videos, brush up on your
+ skills, and submit your quiz and photo materials to receive your
+Certiﬁcation. </li>
+          <li class="last">Course subscriptions begin within 72 hours of the event date. </li>
+          </ul>
+    </div>
+   <div class="text-center-box">Here's what you'll do:</div>
+     </div>
+     <div class="clear"></div>
+     <div class="gray-bg" style="background-color: #e6e6e6;">
+        <div class="gray-bg-contain">
+           <ul class="HowtoLernList gray-bg-contain_list">
+              <li class="first"><span>1.</span> Log in to your online education account at <a href="http://donnabellahair.com/oe" class="gray-bg-contain_list-linl ">donnabellahair.com/online-education./</a></li>
+              <li><span>2.</span> Go to the top bar and select "Course Catalog."</li>
+              <li><span>3.</span> Scroll to the bottom of the page and select "The Complete Online Course."</li>
+              <li><span>4.</span>  Watch the education video and submit the online quiz (80% is passing).</li>
+              <li class="last"><span>5.</span> Perform a full-row installation (or a full-head installation for extra practice), then send in before  <br>      & after photos and photos of the bonds and placements to <a href="mailto:certification@donnabellahair.com" class="gray-bg-contain_list-linl ">certification@donnabellahair.com.</a></li>
+            </ul>
+        </div>
+     </div>
+     <div class="contain_box">
+       <p> We’ll go over your submissions and, if approved, you’ll receive your certificate with marketing <br>
+        materials in the mail.</p>
+        <p>You’ll also be listed on our exclusive<span> Stylist Directory</span> so that new hair extension clients can easily <br>
+        find you.<br>
+        <span>Your online access to the course lasts for 30 days. To extend your access, call 888-424-7548.</span></p>
+        <h1>Sign up now to reserve your spot—<b>space is limited!</b></h1>
+        <div class="reserve_your_box">
+            <div class="ReserveYourBox ReserveYour_bx">
+                <h2><span>RESERVE YOUR</span><br>
+                 Donna Bella <span style="color: #FF1493;">Pro Series</span> Spot</h2>
+                <div class="ReservePrice">$75</div>
+                Limited Spots Available!
+                <div class="SelectYoutCityBTN enroll_now_btn">
+            <a href="http://www.donnabellahairextensions.com/proseries_locations">SEE LOCATIONS</a>
+        </div>
+          </div>
+      </div>
+     </div>
+  </div>
+<!-- <form onsubmit="return CheckAddProduct(this, '1', '-', '-')" method="post" action="index.php?" id="proSeriesAddItem" name="frmAddItem">
+<input type="hidden" value="AddItem" id="oa" name="oa">
+<input type="hidden" value="" name="ua">
+<input type="hidden" value="ChicagoAllWeekend" id="oa_id" name="oa_id">
+<input type="hidden" value="1099" id="pid" name="pid">
+<input type="hidden" value="1" id="oa_quantity" name="oa_quantity">
+<input type="hidden" value="y" id="ProSeriesProdcut" name="ProSeriesProdcut">
+<div class="SelectYoutCityBTN"><a href="javascript:;" onClick="javascript:proseries_add_to_cart();">SIGN UP</a></div>
+</form> -->
+  <!-- /MAIN CONTENT DIV -->
+</div>
+<!-- /CONTENT -->
